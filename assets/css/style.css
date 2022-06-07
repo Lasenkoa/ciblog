@@ -1,0 +1,39 @@
+.post-date {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #585050;
+    padding: 4px;
+    margin: 3px;
+    display: block;
+}
+
+.post-thumb {
+    width: 100%;
+}
+
+.pagination-links{
+    margin: 30px;
+}
+
+.pagination-links strong{
+    color: #568ac1;
+    padding: 8px 13px;
+    margin: 5px;
+    background: #5e5d5d;
+    border: 1px #ccc solid;
+}
+
+a.pagination-link{
+    color: #f4f4f4;
+    padding: 8px 13px;
+    margin: 5px;
+    background: #5e5d5d;
+    border: 1px #ccc solid;
+}
+
+.cat-delete {
+    background: #5e5d5d;
+    color: blue;
+    display: inline;
+    text-decoration-line: none;
+}
