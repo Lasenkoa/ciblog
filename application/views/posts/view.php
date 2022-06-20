@@ -1,12 +1,11 @@
-<h2><?php echo $post['title']; ?></h2>
+<h2><?php echo $post['title']; ?></h2> <!-- Body of a post -->
 <small class="post-date">Posted on: <?php echo $post['created_at']; ?></small><br>
 <img src="<?php echo site_url(); ?>assets/images/posts/<?php echo $post['post_image']; ?>"><br>
 <div class="post-body">
     <?php echo $post['body']; ?>
 </div> 
 
-
-<?php if ($this->session->userdata('user_id') == $post['user_id']) : ?>
+<?php if ($this->session->userdata('user_id') == $post['user_id']) : ?> <!-- Buttons for edit and delete post -->
     <hr> 
     <a class="btn btn-primary" style="float:left; margin-right: 5px;" href="<?php echo base_url(); ?>posts/edit/<?php echo $post['slug']; ?>">Edit</a>
     <?php echo form_open('/posts/delete/' . $post['id']); ?>
@@ -14,19 +13,18 @@
     </form>
 <?php endif; ?>
 
-<hr>
-<h3>Comments</h3>
+<hr><h3>Comments</h3> <!-- Commentsection -->
 <?php if ($comments) : ?>
     <?php foreach ($comments as $comment) : ?>
         <div style="background-color: #444">
-            <h5><?php echo $comment['body']; ?> [by <strong><?php echo $comment['name'] ?></strong>]</STRONG></h5>
+            <h5><?php echo $comment['body']; ?> [by <strong><?php echo $comment['name'] ?></strong>]</STRONG></h5> 
         </div>
     <?php endforeach; ?>
 <?php else : ?>
     <p>No comments to display</p>
 <?php endif; ?>
-<hr>
-<h3>Add Comment</h3>
+
+<hr><h3>Add Comment</h3> <!-- Create comment for post -->
 <?php echo validation_errors(); ?>
 <?php echo form_open('comments/create/' . $post['id']); ?>
 <div class="form-group">

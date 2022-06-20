@@ -3,4 +3,4 @@
             CKEDITOR.replace( 'editor1' );
         </script>
     </body>
-</html>
+</html><!-- End of website -->

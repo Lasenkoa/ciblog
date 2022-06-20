@@ -1,7 +1,6 @@
 <html>
-
 <head>
-    <!-- Implementation of links, stysheets, scripts -->
+    <!-- Implementation of links, stylesheets, scripts -->
     <title>ciBlog</title>
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
@@ -9,14 +8,14 @@
 </head>
 
 <body>
-    <!-- Navbar 1/3 -->
+    <!-- Navbar 1/3 Left -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary navbar-inverse">
         <div class="container">
             <div>
                 <a class="navbar-brand" href="<?php echo base_url(); ?>">ciBlog</a>
             </div>
 
-            <!-- Navbar 2/3 -->
+            <!-- Navbar 2/3 Middle -->
             <div id="navbar">
                 <ul class="nav navbar-nav">
                     <li><a class="nav-link" href="<?php echo base_url(); ?>">Home</a></li>
@@ -26,7 +25,7 @@
                 </ul>
             </div>
 
-            <!-- Navbar 3/3 -->
+            <!-- Navbar 3/3 Right -->
                 <div>
                     <ul class="navbar navbar-nav navbar-dark">
                         <?php if(!$this->session->userdata('logged_in')) : ?>

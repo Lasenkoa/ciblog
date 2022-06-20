@@ -1,9 +1,11 @@
 <?php // Interface between view and model
 class Comments extends CI_Controller{
-    public function create($post_id){
+    
+    public function create($post_id){ // Create comment under a post
         $slug = $this->input->post('slug');
         $data['post'] = $this->post_model->get_posts($slug);
 
+        // Fields of input
         $this->form_validation->set_rules('name', 'Name', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required');
         $this->form_validation->set_rules('body', 'Body', 'required');
@@ -18,6 +20,3 @@ class Comments extends CI_Controller{
         }
     }
 }
-
-
-?>
